@@ -1,0 +1,20 @@
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-md-2" type="email" placeholder="Enter your email">
+    <button class="btn btn-secondary my-2 my-sm-0 btn-info" type="submit">Get My Saved Giphys!</button>
+  </form>
+</nav>-->
+<div class="jumbotron" id="jumbo">
+  <div class="col-md-4 offset-lg-4">
+    <div align="center">
+      <form #searchForm="ngForm" (ngSubmit)="findGiphys()">
+        <!--  <label class="col-form-label col-form-label-lg" for="inputLarge">Browse giphys!</label> -->
+        <input class="form-control form-control-lg" type="text" name="imageQuery" placeholder="Search Giphys" id="inputLarge" ngModel required>
+        <br>
+        <button type="submit" class="btn btn-custom btn-lg" [disabled]="searchForm.invalid">Find Giphys!</button>
+      </form>
+    </div></div>
+</div>
+<app-image-panel></app-image-panel>
+
+

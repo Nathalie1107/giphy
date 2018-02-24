@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/darkly/bootstrap.min.css");
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+#jumbo{
+  padding: 1em;
+}
+
+#jumboUser{
+  padding: 2em;
+}
+
+#jumboPage{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 3em;
+}
+
+#jumboPage2{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 4em;
+}
+
+button.btn-custom{
+  background-color: greenyellow;
+  color: black;
+}
+
+button.btn-custom:disabled{
+  background-color: greenyellow;
+  color: black;
+}
+
+button.btn-custom:focus{
+  background-color: greenyellow;
+  color: black;
+}
+
+button.btn-custom:hover{
+  background-color: hotpink;
+  color: black;
+}
+
+div.loginText {
+  color: greenyellow;
+}
+
+div.show-image {
+  position: relative;
+  float:left;
+  width: 250px;
+}
+div.show-image:hover img{
+  opacity:0.5;
+}
+div.show-image:hover button {
+  display: block;
+}
+div.show-image button {
+  position:absolute;
+  display:none;
+}
+div.show-image button.saveToList {
+  top:0;
+  left:0;
+}
+div.show-image button.delete {
+  top:0;
+  left:0;
+}
+
+div.thumbnail {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+div.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+div.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.custom-pagination /deep/ .ngx-pagination .current {
+  background: greenyellow;
+  color: black;
+}
+
+.custom-pagination /deep/ .ngx-pagination a:hover {
+  background: hotpink;
+  color: black;
+}
+
+
+
+

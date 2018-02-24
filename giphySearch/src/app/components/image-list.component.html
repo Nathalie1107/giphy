@@ -1,0 +1,18 @@
+<div *ngIf="checkLoginUser">
+<div *ngIf="imagesList.length > 0; else noImages">
+  <pagination-controls class="custom-pagination" (pageChange)="p = $event">
+  </pagination-controls>
+  <div style="margin-left: 55px">
+<div class="show-image thumbnail" *ngFor="let g of imagesList | paginate: {itemsPerPage: 20, currentPage: p}">
+    <img src="https://media3.giphy.com/media/{{g.imageId}}/200.gif">
+    <div *ngIf="userEmail"><button class="delete btn btn-custom" type="submit" (click)="deleteFromList(g.imageId)">Delete!</button>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+<ng-template #noImages>
+  <div class="jumbotron" id="jumboPage">You have no favourite Giphys at the moment :( Get some Giphys now!</div>
+</ng-template>
+

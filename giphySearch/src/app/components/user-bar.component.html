@@ -1,0 +1,25 @@
+<div class="jumbotron" id="jumboUser">
+  <div class="col-md-6">
+    <div align="left">
+
+      <div *ngIf="!userEmail;else loggedIn">
+      <form #registerForm="ngForm" (ngSubmit)="login()">
+        <div class="form-group">
+        <input class="form-control form-control-lg" type="email" name="emailEntry"
+               placeholder="Enter email to favourite giphys" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-custom" [disabled]="registerForm.invalid">Go!</button>
+      </form>
+      </div>
+
+      <ng-template #loggedIn> <div class="loginText">You are logged in as {{userEmail}}
+        <button type="button" class="btn btn-custom" (click)="logout()">Logout</button>
+        <br><br>
+        <button type="button" class="btn btn-custom btn-md" (click)="listFav()">My Favourites</button>
+        <button type="button" class="btn btn-custom btn-md" (click)="loadSearch()">Get Some Giphys</button>
+    </div>
+      </ng-template>
+
+    </div>
+</div>
+</div>

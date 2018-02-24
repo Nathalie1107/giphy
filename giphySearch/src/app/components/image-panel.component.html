@@ -1,0 +1,24 @@
+<div *ngIf="showSpinner" align="center">
+<mat-progress-spinner mode="indeterminate" value="75"></mat-progress-spinner>
+</div>
+
+<div *ngIf="!showSpinner">
+<div *ngIf="allGiphies.length > 0">
+    <div class="jumbotron" id="jumboPage">There are {{allResults.pagination.total_count}} related searches!</div>
+  <pagination-controls class="custom-pagination" (pageChange)="p = $event">
+  </pagination-controls>
+</div>
+</div>
+
+
+<div style="margin-left: 55px">
+<div class="show-image thumbnail" *ngFor="let g of allGiphies | paginate: { itemsPerPage: 20, currentPage: p} ">
+  <img src="{{g.images.fixed_height.url}}">
+       <div *ngIf="userEmail">
+   <button class="saveToList btn btn-custom" type="submit" (click)="addToList(g.id)">Favourite this!</button>
+     </div>
+       </div>
+</div>
+
+
+
